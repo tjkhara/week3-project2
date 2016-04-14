@@ -13,6 +13,7 @@
 
 // 5. Write a function called filterSixPlus() that takes the following array and removes words
 //    that are less than six characters.
+var words = ["window", "table", "barstool", "glass", "charger", "outlet"];
 
 // 6. Use a function to ask a user for a temperature in Celsius and converts it to Fahrenheit.
 //    HINT: You may need to use parseFloat to convert the user's string input to a float.
