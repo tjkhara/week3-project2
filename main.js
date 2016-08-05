@@ -23,10 +23,60 @@ ADVANCED TRACK: 10-13
 // 1. Without using Math.min(), write a function called minimum() that takes two numbers
 //    and outputs the smaller number.
 
+console.log("\nQuestion 1 \n");
+
+// 1. Without using Math.min(), write a function called minimum() that takes two numbers
+//    and outputs the smaller number.
+
+function minimum(numOne,numTwo) {
+	if(numOne<numTwo) {
+		return numOne;
+	} else {
+		return numTwo;
+	}
+}
+
+console.log(minimum(5,2));
+
 // 2. Create a new function called minimum3() to find the smallest of three numbers.
+
+console.log("\nQuestion 2 \n");
+
+// 2. Create a new function called minimum3() to find the smallest of three numbers.
+
+function minimum3(a,b,c) {
+	if (a < b && a < c) {
+		return a;
+	} else if (b < a && b < c) {
+		return b;
+	} else if (c < a && c < b) {
+		return c;
+	}
+}
+
+console.log(minimum3(4,5,3));
+
+
 
 // 3. Declare a function called sum() that takes an array of numbers as an argument adds them together.
 //    i.e. sum([1, 2, 3, 4]) should return 10.
+
+console.log("\nQuestion 3 \n");
+
+// 3. Declare a function called sum() that takes an array of numbers as an argument adds them together.
+//    i.e. sum([1, 2, 3, 4]) should return 10.
+
+function sum(arrayOfNums) {
+	for (i=0; i<arrayOfNums.length; i++) {
+		var total = 0;
+		total = arrayOfNums[i] + total;
+	}
+	
+	return total;
+}
+var arrayOne = [1,2,3,4];
+
+console.log(sum(arrayOne));
 
 // 4. Declare a function called multiply() that takes an array of numbers and multiplies them together.
 //    i.e. multiply([1, 2, 3, 4]) should return 24.
