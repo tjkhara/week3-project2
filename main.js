@@ -256,7 +256,51 @@ function grabCharactersAfterPeriod (string) {
 // 10. Write a function called countChars() that behaves like countBs(), except it takes a
 //    second argument that indicates what character is to be counted.
 
+console.log("\nQuestion 10 \n");
+// 10. Write a function called countChars() that behaves like countBs(), except it takes a
+//    second argument that indicates what character is to be counted.
+
+function countChars(string,countChar) {
+	
+	var counter = 0;
+	for(i=0;i<string.length;i++) {
+		if(string.charAt(i) === countChar) {
+			counter++;
+		}
+	}
+	return counter;
+}
+
+console.log(countChars("hello","l"));
+
 // 11. Declare a function called ohZero that replaces all of the o's in a string with 0's.
+
+console.log("\nQuestion 11\n");
+
+// 11. Declare a function called ohZero that replaces all of the o's in a string with 0's.
+
+function ohZero(string) {
+	
+	var arrayOfString = [];
+	
+	for(var i=0; i<string.length; i++) {
+		arrayOfString.push(string[i]);
+	}
+
+	for (var j=0; j<arrayOfString.length; j++) {
+		if(arrayOfString[j] === "o") {
+			arrayOfString[j] = 0;
+		}
+	}
+	
+	var stringAgain = "";
+	for (var k=0; k<arrayOfString.length; k++) {
+		stringAgain = stringAgain.concat(arrayOfString[k]);
+	}
+	console.log(stringAgain);
+}
+
+ohZero("hello");
 
 // 12. Write a function that prints out the entire "99 Bottles of Beer on the Wall" song lyrics.
 
