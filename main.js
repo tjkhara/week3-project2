@@ -304,8 +304,67 @@ ohZero("hello");
 
 // 12. Write a function that prints out the entire "99 Bottles of Beer on the Wall" song lyrics.
 
+console.log("\nQuestion 12\n");
+
+// 12. Write a function that prints out the entire "99 Bottles of Beer on the Wall" song lyrics.
+
+function printLyrics99Bottle() {
+	
+	for (var i=99; i>0; i--) {
+		
+		if(i > 1) {
+		console.log(i.toString() + " bottles of beer on the wall, " + i.toString() + " bottles of beer.Take one down and pass it around, " + (i-1).toString() + " bottles of beer on the wall.");
+		} else if (i === 1) {
+			console.log("1 bottle of beer on the wall, 1 bottle of beer. Take one down and pass it around, no more bottles of beer on the wall. \nNo more bottles of beer on the wall, no more bottles of beer. Go to the store and buy some more, 99 bottles of beer on the wall.");
+		}
+	}
+	
+}
+
+printLyrics99Bottle();
+
 // 13. Create a 'Guessing Game'. The game starts by picking a random number.
 //    It then prompts the user to guess the number. If the user's number is lower/higher,
 //    it will prompt the user to enter another guess and tell the user if the guess was
 //    too high or too low. This continues until the correct guess is entered.
 //    When the correct guess is entered the user is given a success message with the correct number.
+
+console.log("\nQuestion 13\n");
+
+// 13. Create a 'Guessing Game'. The game starts by picking a random number.
+//    It then prompts the user to guess the number. If the user's number is lower/higher,
+//    it will prompt the user to enter another guess and tell the user if the guess was
+//    too high or too low. This continues until the correct guess is entered.
+//    When the correct guess is entered the user is given a success message with the correct number.
+
+var randomNumber = getRandomInt(1,100);
+
+function numPick() {
+var userPick = prompt("Please pick a number between 0 and 100");
+if(userPick === randomNumber) {
+	return userPick;
+} else {
+numComparison(userPick);
+}
+}
+
+function numComparison(num) {
+if (num > randomNumber) {
+	alert("You picked too high");
+	numPick();	
+} else if (num < randomNumber) {
+	alert("You picked too low");
+	numPick();
+}
+}
+
+console.log("The number is " + numPick());
+
+// Returns a random integer between min (included) and max (excluded)
+// Using Math.round() will give you a non-uniform distribution!
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+
